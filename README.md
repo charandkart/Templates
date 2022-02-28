@@ -1,3 +1,3 @@
 # This is a Notification template project
 
-[https://bb.githack.com/charandkart/Templates/raw/master/index.html]
+[https://raw.githubusercontent.com/charandkart/Templates/raw/master/index.html]
