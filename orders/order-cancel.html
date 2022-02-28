@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your DolphinsKart order has been cancelled</title>
+    
+</head>
+<body>
+    <style>
+        body{
+            margin: 0 15rem;
+        }
+        @media only screen and (max-device-width: 768px) {
+            body {
+
+                margin: 0 1rem;
+            }
+    
+        }
+    </style>
+    <header style="display:flex; flex-direction:row;text-align: center;">
+        <img src="http://qa.dolphinskart.com/static/media/dolphinskart_.00be2bda.png" alt="Dolphinskart" style="width: 120px;" />
+        <div style="text-align:right;flex:1; padding-left: 2rem;">
+            <div>
+                <a href="http://qa.dolphinskart.com/account/your-orders" style="border-right: 2px solid #bbb; padding: 0 4px;">Your Orders</a>
+                <a href="http://qa.dolphinskart.com/account/" style="border-right: 2px solid #bbb; padding: 0 4px;">Your Account</a>
+                <a href="http://qa.dolphinskart.com" >DolphinsKart.com</a>
+            </div >
+            <div style="border-bottom:2px solid #bbb; margin: 8px 0px;"></div>
+            <div>
+                <span style="font-size: x-large;">
+
+                    Order Cancelled
+                </span>
+                <br/>
+                <span> Order #DO12-1234-1234-1234</span>          
+            </div>
+        </div>
+    </header>
+    
+    <section>
+        <div style="color: blue;font-size: large;">
+            Hello Charan,
+        </div>
+        <span>All Gift Card funds reserved for this order have been returned to your Gift Card balance</span>
+        <div style="margin: 16px 0; padding: 0 16px 16px 16px; border-top: 4px solid #000; background-color: #eee;">
+            <p style="font-weight: 600;">
+                Before placing your next order, you can double-check your card details or add a new payment method here:
+            </p>
+            <button  style="padding: 12px; background-color: blue; color: #fff;">Manage Payment Options</button>
+        </div>
+    </section>
+    <section>
+        <div style="color: blue;font-size: large; border-bottom: 2px solid #eee; padding-bottom: 2px;">
+            Cancelled Order Details
+        </div>
+        <span> Order #DO12-1234-1234-1234</span>
+        <div id="orders">
+            <span style="color: #999;">Placed on {orderDate}</span>
+            <div style="display: flex; padding: 4px 0;">
+                <img src="{imageUrl}" alt="Dolphinskart" style="width: 120px;" />
+                <div style="flex: 1; padding-left: 2rem;">
+                    <a href="{link}">{title}</a>
+                    <br/>
+                    <span>Sold by {sellerDisplayName}</span>
+                    <br/>
+                    <span>Cancel reason: {cancelReason}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <p>
+        Visit our Help pages for more information on Accepted Credit and Debit Cards and to learn how to Revise Payment
+    </p>
+    <section>
+        We hope to see you again soon.
+        <h3>Dolphinskart.com</h3>
+    </section>
+    <footer>${footerBody}</footer>
+    <script>
+        function orderTemplate(order) {
+      return `
+            <span style="color: #999;">Placed on ${order.orderDate}</span>
+            <div style="display: flex; padding: 4px 0;">
+                <img src=${order.imageUrl} alt="Dolphinskart" style="width: 120px;" />
+                <div style="flex: 1; padding-left: 2rem;">
+                    <a href=${order.link}>${order.title}</a>
+                    <br/>
+                    <span>Sold by ${order.sellerDisplayName}</span>
+                    <br/>
+                    <span>Cancel reason: ${order.cancelReason}</span>
+                </div>   
+            </div>
+      `;
+    }
+        var orders = [
+            {
+                orderDate:"Friday, January 7, 2022",
+                title:"WOL 3D NEW PLA Pro+ with Improved formula (DAISY WHITE, 1.75mm) 3D Filament Made in India",
+                imageUrl:"https://m.media-amazon.com/images/I/51rFRhrP9lL._SY115_SX115_.jpg",
+                link:"http://dolphinskart.com/p/",
+                sellerDisplayName:"WOL 3D",
+                cancelReason:"Payment Declined"
+            },
+            {
+                orderDate:"Friday, January 17, 2022",
+                title:"WOL 3D NEW PLA Pro+ with Improved formula (DAISY WHITE, 1.75mm) 3D Filament Made in India",
+                imageUrl:"https://m.media-amazon.com/images/I/51rFRhrP9lL._SY115_SX115_.jpg",
+                link:"",
+                sellerDisplayName:"WOL 3D",
+                cancelReason:"Payment Declined"
+            }
+        ]
+        document.getElementById("orders").innerHTML = `${orders.map(orderTemplate).join("")}`
+    </script>
+</body>
+
+</html>

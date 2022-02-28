@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>Hello <strong>${name},</strong></main>
+    <section>
+        <span>
+            Thanks for your shopping with <a href="http://qa.dolphinskart.com">dolphinskart.com.</a> We’ll send a confirmation when your order is dispatched. Your order details are indicated below.
+        </span>
+        <ul style="list-style-type: none; padding-top: 0; margin-top: 0;">
+
+            <li>
+                Order Number <a href="http://qa.dolphinskart.com/account/your-orders/order-details?orderNumber=${orderNumber}">${orderNumber}</a>
+            </li>
+            <li>
+                Your Shipping Address is: ${shippingAddress}
+            </li>
+            <li>
+                ${message}
+            </li>
+        </ul>
+        
+    </section>
+    <hr style="width:70%;height:2px;text-align:left;margin-left:0;background-color:#166bc0;"></hr>
+<footer>
+    ${footerBody}
+    <small>For un Subscribe <a href="http://qa.dolphinskart.com/un-subscribe?token=${emailId}">click here</a></small>
+</footer>
+</body>
+</html>
