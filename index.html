@@ -53,15 +53,17 @@
                     </div>
                    
                   </p>
-                  <a href="./orders/order-confirmation.html" class="btn btn-primary">View Template</a>
+                  <a href=${template.link} class="btn btn-primary">View Template</a>
                 </div>
               </div>
             </div> 
       `;
     }
+    const base = "http://htmlpreview.github.io/?https://github.com/charandkart/Templates/master"
     const templates= [
         {
             title:"Order Confirmation",
+            link:`${base}/orders/order-confirmation.html`,
             attributes:[
                 {
                     name:"Order Number",
