@@ -30,39 +30,40 @@
         }
       return `
       <div class="col-sm-12 col-md-6 col-xl-4">
-              <div class="card">
+              <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">${template.title}</h5>
                   <p class="card-text">
-                    <span>Confirmation Template that is sent when customer place an order from DolphinsKart.com</span>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Key Table Content
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body"> 
-                                <table class="table table-striped">
-                                    ${template.attributes.map(addAttributes).join("")}
-                                </table>
+                    <span>${template.description}</span>
+                    <div class="accordion accordion-flush" id=${`accordionFlushExample_${template.title}`}>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id=${`header_${template.title}`}>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target=${`#flush-collapseOne_${template.title}`} aria-expanded="false" aria-controls=${`flush-collapseOne_${template.title}`}>
+                                Key Table Content
+                                </button>
+                            </h2>
+                            <div id=${`flush-collapseOne_${template.title}`} class="accordion-collapse collapse" aria-labelledby=${`header_${template.title}`} data-bs-parent=${`#accordionFlushExample_${template.title}`}>
+                                <div class="accordion-body"> 
+                                    <table class="table table-striped">
+                                        ${template.attributes.map(addAttributes).join("")}
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
                    
                   </p>
-                  <a href=${template.link} class="btn btn-primary">View Template</a>
+                  <a target="_blank" href=${template.link} class="btn btn-primary">View Template</a>
                 </div>
               </div>
             </div> 
       `;
     }
-    const base = "http://htmlpreview.github.io/?https://github.com/charandkart/Templates/master"
+    const base = "." || "http://htmlpreview.github.io/?https://github.com/charandkart/Templates/master"
     const templates= [
         {
             title:"Order Confirmation",
+            description:"Confirmation Template that is sent when customer place an order from DolphinsKart.com",
             link:`${base}/orders/order-confirmation.html`,
             attributes:[
                 {
@@ -104,6 +105,48 @@
                 {
                     name:"Unsubscribe Email-Id",
                     key:"emailId"
+                }
+            ]
+        },
+        {
+            title:"Order Shipped",
+            link:`${base}/orders/order-shipped.html`,
+            description:"Notifiy customer when order is shipped by shiprocket courier agent",
+            attributes:[
+                {
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Shipment Number",
+                    key:"shipmentNumber"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]
+        },
+        {
+            title:"Order Cancelled",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-cancel.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
                 }
             ]
         }
