@@ -15,7 +15,10 @@
     </nav>
     <main class="container my-3">
         <h3><span class="badge bg-secondary">Orders</span></h3>
-        <div id="templates" class="row"></div>
+        <div id="orders" class="row"></div>
+        <hr/>
+        <h3><span class="badge bg-secondary">Returns</span></h3>
+        <div id="returns" class="row"></div>
     </main>
 
 <script>
@@ -53,17 +56,23 @@
                     </div>
                    
                   </p>
-                  <a target="_blank" href=${template.link} class="btn btn-primary">View Template</a>
+                  
+                  <div style="display: flex;justify-content: space-between;">
+                    <a target="_blank" href=${template.link} class="btn btn-primary">View Template</a>
+                    <a target="_blank" href=${template.source} class="btn btn-text"><small>Source Code</small></a>
+                    </div>
                 </div>
               </div>
             </div> 
       `;
     }
-    const base = "." || "http://htmlpreview.github.io/?https://github.com/charandkart/Templates/master"
-    const templates= [
+    const base = ".";
+    const raw_base = "https://raw.githubusercontent.com/charandkart/Templates/master";
+    const orders= [
         {
             title:"Order Confirmation",
             description:"Confirmation Template that is sent when customer place an order from DolphinsKart.com",
+            source:`${raw_base}/orders/order-confirmation.html`,
             link:`${base}/orders/order-confirmation.html`,
             attributes:[
                 {
@@ -111,6 +120,7 @@
         {
             title:"Order Cancelled",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-cancel.html`,
             link:`${base}/orders/order-cancel.html`,
             attributes:[
                 {
@@ -131,86 +141,10 @@
                 },
             ]
         },
-        // {
-        //     title:"Order Shipped",
-        //     link:`${base}/orders/order-shipped.html`,
-        //     description:"Notifiy customer when order is shipped by shiprocket courier agent",
-        //     attributes:[
-        //         {
-        //             name:"Order Number",
-        //             key:"orderNumber"
-        //         },
-        //         {
-        //             name:"Name",
-        //             key:"name"
-        //         },
-        //         {
-        //             name:"Estimated Delivery Date",
-        //             key:"estimatedDeliveryDate"
-        //         },
-        //         {
-        //             name:"Shipment Number",
-        //             key:"shipmentNumber"
-        //         },
-        //         {
-        //             name:"Footer Body",
-        //             key:"footerBody"
-        //         },
-        //         {
-        //             name:"Unsubscribe Email-Id",
-        //             key:"emailId"
-        //         }
-        //     ]
-        // },
-       
-        // {
-        //     title:"Pick up Delay",
-        //     description:"Notify customer about there cancelled order and reason for cancelling order",
-        //     link:`${base}/orders/order-cancel.html`,
-        //     attributes:[
-        //         {
-        //             name:"",
-        //             key:""
-        //         }
-        //     ]
-        // },
-        // {
-        //     title:"Return Initiated",
-        //     description:"Notify customer about there cancelled order and reason for cancelling order",
-        //     link:`${base}/orders/order-cancel.html`,
-        //     attributes:[
-        //         {
-        //             name:"",
-        //             key:""
-        //         }
-        //     ]
-        // },
-        // {
-        //     title:"Return Accepted",
-        //     description:"Notify customer about there cancelled order and reason for cancelling order",
-        //     link:`${base}/orders/order-cancel.html`,
-        //     attributes:[
-        //         {
-        //             name:"",
-        //             key:""
-        //         }
-        //     ]
-        // },
-        // {
-        //     title:"Return Declined",
-        //     description:"Notify customer about there cancelled order and reason for cancelling order",
-        //     link:`${base}/orders/order-cancel.html`,
-        //     attributes:[
-        //         {
-        //             name:"",
-        //             key:""
-        //         }
-        //     ]
-        // },
-       
         {
             title:"Order Delivered",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-delivered.html`,
             link:`${base}/orders/order-delivered.html`,
             attributes:[
                 {
@@ -238,6 +172,7 @@
         {
             title:"Order Out For Delivery",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-out-for-delivery.html`,
             link:`${base}/orders/order-out-for-delivery.html`,
             attributes:[
             {
@@ -281,6 +216,7 @@
         {
             title:"Order Final Delivery Station",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-final-delivery.html`,
             link:`${base}/orders/order-final-delivery.html`,
             attributes:[
                 {
@@ -316,6 +252,7 @@
         {
             title:"Order Left",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-left.html`,
             link:`${base}/orders/order-left.html`,
             attributes:[
             {
@@ -351,6 +288,7 @@
         {
             title:"Order Arrived",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-arrived.html`,
             link:`${base}/orders/order-arrived.html`,
             attributes:[
             {
@@ -386,6 +324,7 @@
         {
             title:"Order Dispatched",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-confirmation.html`,
             link:`${base}/orders/order-dispatch.html`,
             attributes:[
             
@@ -418,6 +357,7 @@
         {
             title:"Order Accepeted",
             description:"Notify customer about there cancelled order and reason for cancelling order",
+            source:`${raw_base}/orders/order-confirmation.html`,
             link:`${base}/orders/order-updated.html`,
             attributes:[
             {
@@ -453,11 +393,155 @@
                     key:"emailId"
                 },
             ]
-        }
-    
-    ];
+        },
+        ];
 
-    document.getElementById("templates").innerHTML = `${templates.map(templateCards).join("")}`
+    const returns = [
+        {
+            title:"Return Initiated",
+            description:"Notify customer when then return an item. along with the reason for return and info about order",
+            source:`${raw_base}/returns/return-initiated.html`,
+            link:`${base}/returns/return-initiated.html`,
+            attributes:[
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]   
+        }, 
+        {
+            title:"Return Scheduled",
+            description:"Notify customer when then return an item. along with the reason for return and info about order",
+            source:`${raw_base}/returns/return-scheduled.html`,
+            link:`${base}/returns/return-scheduled.html`,
+            attributes:[
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Order Number",
+                    key:"executiveDetails"
+                },
+                {
+                    name:"Pickup date",
+                    key:"date"
+                },
+                {
+                    name:"Order Details",
+                    key:"orderDetails",
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]   
+        },
+        {
+            title:"Return Today",
+            description:"Notify customer about return item pickup today with executive and item info",
+            source:`${raw_base}/returns/return-today.html`,
+            link:`${base}/returns/return-today.html`,
+            attributes:[
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Order Number",
+                    key:"executiveDetails"
+                },
+                {
+                    name:"Pickup Time",
+                    key:"time"
+                },
+                {
+                    name:"Order Details",
+                    key:"orderDetails",
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]   
+        },
+        {
+            title:"Return Cancelled",
+            description:"Notify customer about return item cancelled due to underlying issues",
+            source:`${raw_base}/returns/return-cancelled.html`,
+            link:`${base}/returns/return-cancelled.html`,
+            attributes:[
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Order Details",
+                    key:"orderDetails",
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]   
+        },
+        {
+            title:"Return Completed",
+            description:"Notify customer about return order reached back seller",
+            source:`${raw_base}/returns/return-completed.html`,
+            link:`${base}/returns/return-completed.html`,
+            attributes:[
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Order Details",
+                    key:"orderDetails",
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                }
+            ]   
+        }
+   
+   
+    ]
+    document.getElementById("orders").innerHTML = `${orders.map(templateCards).join("")}`;
+    document.getElementById("returns").innerHTML = `${returns.map(templateCards).join("")}`;
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
