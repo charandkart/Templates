@@ -29,7 +29,7 @@
             `
         }
       return `
-      <div class="col-sm-12 col-md-6 col-xl-4">
+      <div class="col-sm-12 col-md-6 col-xl-4 mb-4">
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">${template.title}</h5>
@@ -151,7 +151,7 @@
             ]
         },
         {
-            title:"Order Cancelled",
+            title:"Pick up Delay",
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-cancel.html`,
             attributes:[
@@ -162,7 +162,7 @@
             ]
         },
         {
-            title:"Order Cancelled",
+            title:"Return Initiated",
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-cancel.html`,
             attributes:[
@@ -173,7 +173,7 @@
             ]
         },
         {
-            title:"Order Cancelled",
+            title:"Return Accepted",
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-cancel.html`,
             attributes:[
@@ -184,7 +184,7 @@
             ]
         },
         {
-            title:"Order Cancelled",
+            title:"Return Declined",
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-cancel.html`,
             attributes:[
@@ -195,9 +195,75 @@
             ]
         },
         {
-            title:"Order Cancelled",
+            title:"Order Delivered",
             description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
+            link:`${base}/orders/order-delivered.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Out For Delivery",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-out-for-delivery.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Final Delivery Station",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-final-delivery.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Left",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-left.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Arrived",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-arrived.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Dispatched",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-dispatch.html`,
+            attributes:[
+                {
+                    name:"",
+                    key:""
+                }
+            ]
+        },
+        {
+            title:"Order Accepeted",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-updated.html`,
             attributes:[
                 {
                     name:"",
@@ -205,6 +271,7 @@
                 }
             ]
         }
+    
     ];
 
     document.getElementById("templates").innerHTML = `${templates.map(templateCards).join("")}`
