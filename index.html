@@ -109,10 +109,114 @@
             ]
         },
         {
-            title:"Order Shipped",
-            link:`${base}/orders/order-shipped.html`,
-            description:"Notifiy customer when order is shipped by shiprocket courier agent",
+            title:"Order Cancelled",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-cancel.html`,
             attributes:[
+                {
+                    name:"Item Name",
+                    key:"itemName"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+        // {
+        //     title:"Order Shipped",
+        //     link:`${base}/orders/order-shipped.html`,
+        //     description:"Notifiy customer when order is shipped by shiprocket courier agent",
+        //     attributes:[
+        //         {
+        //             name:"Order Number",
+        //             key:"orderNumber"
+        //         },
+        //         {
+        //             name:"Name",
+        //             key:"name"
+        //         },
+        //         {
+        //             name:"Estimated Delivery Date",
+        //             key:"estimatedDeliveryDate"
+        //         },
+        //         {
+        //             name:"Shipment Number",
+        //             key:"shipmentNumber"
+        //         },
+        //         {
+        //             name:"Footer Body",
+        //             key:"footerBody"
+        //         },
+        //         {
+        //             name:"Unsubscribe Email-Id",
+        //             key:"emailId"
+        //         }
+        //     ]
+        // },
+       
+        // {
+        //     title:"Pick up Delay",
+        //     description:"Notify customer about there cancelled order and reason for cancelling order",
+        //     link:`${base}/orders/order-cancel.html`,
+        //     attributes:[
+        //         {
+        //             name:"",
+        //             key:""
+        //         }
+        //     ]
+        // },
+        // {
+        //     title:"Return Initiated",
+        //     description:"Notify customer about there cancelled order and reason for cancelling order",
+        //     link:`${base}/orders/order-cancel.html`,
+        //     attributes:[
+        //         {
+        //             name:"",
+        //             key:""
+        //         }
+        //     ]
+        // },
+        // {
+        //     title:"Return Accepted",
+        //     description:"Notify customer about there cancelled order and reason for cancelling order",
+        //     link:`${base}/orders/order-cancel.html`,
+        //     attributes:[
+        //         {
+        //             name:"",
+        //             key:""
+        //         }
+        //     ]
+        // },
+        // {
+        //     title:"Return Declined",
+        //     description:"Notify customer about there cancelled order and reason for cancelling order",
+        //     link:`${base}/orders/order-cancel.html`,
+        //     attributes:[
+        //         {
+        //             name:"",
+        //             key:""
+        //         }
+        //     ]
+        // },
+       
+        {
+            title:"Order Delivered",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-delivered.html`,
+            attributes:[
+                {
+                    name:"Item Name",
+                    key:"itemName"
+                },
                 {
                     name:"Order Number",
                     key:"orderNumber"
@@ -122,12 +226,47 @@
                     key:"name"
                 },
                 {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+        {
+            title:"Order Out For Delivery",
+            description:"Notify customer about there cancelled order and reason for cancelling order",
+            link:`${base}/orders/order-out-for-delivery.html`,
+            attributes:[
+            {
+                    name:"Item Name",
+                    key:"itemName"
+                },
+                {
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Agent Number",
+                    key:"agentNumber"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
                     name:"Estimated Delivery Date",
                     key:"estimatedDeliveryDate"
                 },
                 {
-                    name:"Shipment Number",
-                    key:"shipmentNumber"
+                    name:"Message",
+                    key:"message"
                 },
                 {
                     name:"Footer Body",
@@ -136,84 +275,7 @@
                 {
                     name:"Unsubscribe Email-Id",
                     key:"emailId"
-                }
-            ]
-        },
-        {
-            title:"Order Cancelled",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Pick up Delay",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Return Initiated",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Return Accepted",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Return Declined",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-cancel.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Order Delivered",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-delivered.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
-            ]
-        },
-        {
-            title:"Order Out For Delivery",
-            description:"Notify customer about there cancelled order and reason for cancelling order",
-            link:`${base}/orders/order-out-for-delivery.html`,
-            attributes:[
-                {
-                    name:"",
-                    key:""
-                }
+                },
             ]
         },
         {
@@ -222,9 +284,33 @@
             link:`${base}/orders/order-final-delivery.html`,
             attributes:[
                 {
-                    name:"",
-                    key:""
-                }
+                    name:"Item Name",
+                    key:"itemName"
+                },
+                {
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
             ]
         },
         {
@@ -232,10 +318,34 @@
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-left.html`,
             attributes:[
+            {
+                    name:"Item Name",
+                    key:"itemName"
+                },
                 {
-                    name:"",
-                    key:""
-                }
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
             ]
         },
         {
@@ -243,10 +353,34 @@
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-arrived.html`,
             attributes:[
+            {
+                    name:"Item Name",
+                    key:"itemName"
+                },
                 {
-                    name:"",
-                    key:""
-                }
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
             ]
         },
         {
@@ -254,10 +388,31 @@
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-dispatch.html`,
             attributes:[
+            
                 {
-                    name:"",
-                    key:""
-                }
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
             ]
         },
         {
@@ -265,10 +420,38 @@
             description:"Notify customer about there cancelled order and reason for cancelling order",
             link:`${base}/orders/order-updated.html`,
             attributes:[
+            {
+                    name:"Item Name",
+                    key:"itemName"
+                },
                 {
-                    name:"",
-                    key:""
-                }
+                    name:"Order Number",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Name",
+                    key:"name"
+                },
+                {
+                    name:"Seller Name",
+                    key:"sellerName"
+                },
+                {
+                    name:"Delivery Address",
+                    key:"deliveryAddress"
+                },
+                {
+                    name:"Estimated Delivery Date",
+                    key:"estimatedDeliveryDate"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
             ]
         }
     
