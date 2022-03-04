@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Return Order Initiated</title>
+    <title>Seller Cancel Order: Notification to Customer</title>
     <style>
         * {
             box-sizing: border-box;
@@ -124,15 +124,12 @@
                                                                 <div style="font-size: 12px; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #71777D; line-height: 1.2;">
                                                                     <p style="margin: 0; font-size: 14px; text-align: left;">
                                                                         <span>
-                                                                            Hello ${name},
+                                                                            Dear ${name} ,
                                                                         </span>
                                                                         <br/>
                                                                         <span style="text-indent: 1rem;">
-                                                                            
-                                                                            We have accepted your return request for below item. Once we receive  your order and seller accepts it your refund will be initiated.
-                                                        
+                                                                            Due to Unforeseen circumstances we had to cancel your order i.e., ${itemDetails} we regreat the inconvinience caused                                                                         </span>
                                                                     </p>
-                                                                  
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -142,14 +139,15 @@
                                                     <tr>
                                                         <td style="padding-left:10px;padding-right:10px;padding-top:10px;">
                                                             <div style="font-family: sans-serif">
-                                                                <div style="font-size: 12px; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #71777D; line-height: 1.2;">
+                                                                <div style="font-size: 12px;text-align: center; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #71777D; line-height: 1.2;">
                                                                   
-                                                                    <p style="margin: 0; margin-top: 10px; font-size: 14px; text-align: left;">
-                                                                        Order Details : {orderDetails}
-                                                                    </p>
+                                                                    <a href="http://qa.dolphinskart.com/account/your-orders/order-details?orderNumber=${orderNumber}">
+                                                                        <button style="padding: 1rem; background-color: #166bc0;font-weight: 600; color: #fff; cursor: pointer;">
+                                                                            Your Orders
+                                                                        </button>
+                                                                        </a>
                                                                 </div>
                                                             </div>
-                                                            
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -157,11 +155,13 @@
                                                     <tr>
                                                         <td style="padding-left:10px;padding-right:10px;padding-top:10px;">
                                                             <div style="font-family: sans-serif">
-                                                                <div style="font-size: 12px; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #71777D; line-height: 1.2;">
-                                                                
-                                                                    <p style="margin: 0; font-size: 14px; text-align: left;">
-                                                                        please check your dolphinskart account for further updates
-                                                                    </p>
+                                                                <div style="font-size: 12px;text-align: center; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #71777D; line-height: 1.2;">
+                                                                  
+                                                                   <p style="margin: 0; font-size: 14px; text-align: left;">
+                                                                    We hope to see you again soon
+                                                                    <br/>
+                                                                    Team DolphinsKart.com
+                                                                   </p>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -177,13 +177,9 @@
                     </table>
 
                     
-                  
-
-                 
-
+                
                     <!-- Content Ends Here -->
-                    
-              
+             
                     <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3" role="presentation" style="padding-top: 2rem;padding-bottom: 2rem;;mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 						<tbody>
                             <tr>

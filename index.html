@@ -324,7 +324,7 @@
         {
             title:"Order Dispatched",
             description:"Notify customer about there cancelled order and reason for cancelling order",
-            source:`${raw_base}/orders/order-confirmation.html`,
+            source:`${raw_base}/orders/order-dispatch.html`,
             link:`${base}/orders/order-dispatch.html`,
             attributes:[
             
@@ -357,7 +357,7 @@
         {
             title:"Order Accepeted",
             description:"Notify customer about there cancelled order and reason for cancelling order",
-            source:`${raw_base}/orders/order-confirmation.html`,
+            source:`${raw_base}/orders/order-updated.html`,
             link:`${base}/orders/order-updated.html`,
             attributes:[
             {
@@ -394,6 +394,97 @@
                 },
             ]
         },
+        {
+            title:"Order Placed Notify Seller",
+            description:"Notify seller about new order placed with SKU info",
+            source:`${raw_base}/orders/order-confirmation-seller.html`,
+            link:`${base}/orders/order-confirmation-seller.html`,
+            attributes:[
+            {
+                    name:"Item Details",
+                    key:"itemDetails"
+                },
+               
+                {
+                    name:"DSKU ID",
+                    key:"dskuId"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+        {
+            title:"Order Cancelled Notify Seller",
+            description:"Notify seller about customer cancelling an order",
+            source:`${raw_base}/orders/customer-cancel-seller.html`,
+            link:`${base}/orders/customer-cancel-seller.html`,
+            attributes:[   
+                {
+                    name:"DSKU ID",
+                    key:"dskuId"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+        {
+            title:"Seller Cancelled Notify Customer",
+            description:"Notify customer about seller cancelling an order",
+            source:`${raw_base}/orders/seller-cancel-customer.html`,
+            link:`${base}/orders/seller-cancel-customer.html`,
+            attributes:[   
+                {
+                    name:"Item Details",
+                    key:"itemDetails"
+                },
+                {
+                    name:"orderNumber",
+                    key:"orderNumber"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+        {
+            title:"Seller Cancelled Notify Seller",
+            description:"Notify customer about seller cancelling an order",
+            source:`${raw_base}/orders/seller-cancel.html`,
+            link:`${base}/orders/seller-cancel.html`,
+            attributes:[   
+                
+                {
+                    name:"DSKU ID",
+                    key:"dskuId"
+                },
+                {
+                    name:"Footer Body",
+                    key:"footerBody"
+                },
+                {
+                    name:"Unsubscribe Email-Id",
+                    key:"emailId"
+                },
+            ]
+        },
+       
         ];
 
     const returns = [
